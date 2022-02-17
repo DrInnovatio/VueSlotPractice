@@ -1,27 +1,20 @@
 <template>
   <form>
     <div class="help">
-      <p>This is some help text.</p>
+      <slot name="help"></slot>
     </div>
     <div class="fields">
-      <input type="text" placeholder="email">
-      <input type="text" placeholder="username">
-      <input type="password" placeholder="password">
+      <slot name="fields"></slot>
     </div>
     <div class="buttons">
-      <button type="submit">Submit</button>
+      <slot name="buttons"></slot>
     </div>
+    <slot></slot>
   </form>
 </template>
 
 <script>
-
-
 export default {
-
+  name: 'app-form',
 }
 </script>
-
-<style>
-
-</style>
